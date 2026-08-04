@@ -154,6 +154,52 @@ section { padding:clamp(56px,7vw,92px) 0; }
 .gcard figcaption b { display:block; font-size:14px; }
 .gcard figcaption span { display:block; font-size:12px; color:var(--soft); margin-top:2px; }
 
+/* finishes */
+.fwrap { display:grid; grid-template-columns:1fr 380px; gap:clamp(28px,4vw,56px); align-items:start; }
+@media (max-width:920px) { .fwrap { grid-template-columns:1fr; } }
+.fgroup { margin-bottom:24px; }
+.flab { font-family:"IBM Plex Mono",monospace; font-size:10px; letter-spacing:.15em;
+  text-transform:uppercase; color:var(--soft); margin-bottom:10px; }
+.swrow { display:flex; flex-wrap:wrap; gap:10px; }
+.swatch { background:none; border:1px solid var(--line); padding:0; cursor:pointer;
+  width:112px; text-align:left; }
+.subwrap { margin-top:16px; padding:16px; background:#EFEDE6; border:1px solid var(--line); }
+.sublab { margin-bottom:10px; }
+.swatch.sub { width:96px; background:#fff; }
+.swatch.sub .sw { height:52px; }
+.swatch:hover { border-color:var(--soft); }
+.swatch.on { border-color:var(--ink); box-shadow:inset 0 0 0 1px var(--ink); }
+.sw { display:block; height:58px; background-size:cover; background-position:center; }
+.swn { display:block; font-size:11px; line-height:1.3; padding:7px 8px 8px; }
+.swatch.on .swn { font-weight:600; }
+
+.fpanel { background:var(--card); border:1px solid var(--line); padding:22px; position:sticky; top:70px; }
+@media (max-width:920px) { .fpanel { position:static; } }
+.fprev { position:relative; height:190px; overflow:hidden; border:1px solid var(--line); }
+.fp { position:absolute; }
+.fp-wall  { inset:0; background-size:cover; background-position:center; }
+.fp-light { background-size:cover; background-position:center; top:0; left:0; right:0; height:16%; opacity:.55; }
+.fp-rail  { top:52%; left:0; width:56%; height:9%; }
+.fp-floor { background-size:cover; background-position:center; bottom:0; left:0; width:56%; height:38%; }
+.fp-slab  { bottom:0; right:0; width:44%; height:38%; }
+.fpnote { position:absolute; left:0; bottom:0; z-index:5; padding:5px 9px;
+  background:rgba(22,33,31,.78); color:rgba(242,241,236,.9);
+  font-family:"IBM Plex Mono",monospace; font-size:8.5px; letter-spacing:.12em;
+  text-transform:uppercase; }
+.fsum { display:grid; grid-template-columns:96px 1fr; gap:4px 12px; padding:9px 0;
+  border-bottom:1px solid var(--line); }
+.fsum:first-of-type { border-top:1px solid var(--ink); }
+.fsk { font-family:"IBM Plex Mono",monospace; font-size:9px; letter-spacing:.12em;
+  text-transform:uppercase; color:var(--soft); padding-top:3px; }
+.fsv { font-size:14px; font-weight:600; }
+.fsd { grid-column:2; font-size:11.5px; color:var(--soft); margin-top:-3px; }
+.fdisc { font-size:10.5px; line-height:1.55; color:var(--soft); margin:16px 0 0; }
+
+.fhero { margin-bottom:34px; border:1px solid var(--line); }
+.fhero img { width:100%; display:block; cursor:zoom-in; }
+.fhero figcaption { padding:11px 14px; background:var(--card); font-size:12px; color:var(--soft); }
+.fhero figcaption b { color:var(--ink); display:block; font-size:13px; margin-bottom:2px; }
+
 /* lightbox */
 .lb { position:fixed; inset:0; z-index:200; background:rgba(16,22,20,.94); display:none;
   align-items:center; justify-content:center; }
@@ -241,6 +287,7 @@ section { padding:clamp(56px,7vw,92px) 0; }
       <a href="#overview">Overview</a>
       <a href="#calculator">Own vs lease</a>
       <a href="#gallery">Gallery</a>
+      <a href="#finishes">Finishes</a>
       <a href="#location">Location</a>
       <a href="#downloads">Downloads</a>
     </div>
@@ -462,6 +509,56 @@ section { padding:clamp(56px,7vw,92px) 0; }
          easiest way to read the unit dimensions and the bay layout.</p>
     </div>
     <div class="ggrid"><figure class="gcard" data-full="assets/corner.jpg" data-cap="Entry corner from Broken Sound Boulevard NW" tabindex="0"><div class="gimg" style="background-image:url(assets/corner.jpg)"></div><figcaption><b>Corner elevation</b><span>Entry corner from Broken Sound Boulevard NW</span></figcaption></figure><figure class="gcard" data-full="assets/street.jpg" data-cap="Glass line and entries from the parking field" tabindex="0"><div class="gimg" style="background-image:url(assets/street.jpg)"></div><figcaption><b>Storefront elevation</b><span>Glass line and entries from the parking field</span></figcaption></figure><figure class="gcard" data-full="assets/aerial.jpg" data-cap="Looking southwest across the lake toward the golf course" tabindex="0"><div class="gimg" style="background-image:url(assets/aerial.jpg)"></div><figcaption><b>Aerial massing</b><span>Looking southwest across the lake toward the golf course</span></figcaption></figure><figure class="gcard" data-full="assets/floorplan_unit.jpg" data-cap="Enlarged plan of a typical bay" tabindex="0"><div class="gimg" style="background-image:url(assets/floorplan_unit.jpg)"></div><figcaption><b>Typical unit plan</b><span>Enlarged plan of a typical bay</span></figcaption></figure><figure class="gcard" data-full="assets/floorplan.jpg" data-cap="Full floor plate, both buildings" tabindex="0"><div class="gimg" style="background-image:url(assets/floorplan.jpg)"></div><figcaption><b>Building floor plans</b><span>Full floor plate, both buildings</span></figcaption></figure><figure class="gcard" data-full="assets/site.jpg" data-cap="Parcel in context, Broken Sound Boulevard NW" tabindex="0"><div class="gimg" style="background-image:url(assets/site.jpg)"></div><figcaption><b>Site plan</b><span>Parcel in context, Broken Sound Boulevard NW</span></figcaption></figure></div>
+  </div>
+</section>
+
+<section id="finishes">
+  <div class="wrap">
+    <div class="sechead">
+      <div class="kicker">Delivery and finishes</div>
+      <h2 style="margin-top:12px;">Specify it your way</h2>
+      <p>Units are delivered to the base specification below. Everything above it is yours to
+         choose, which is the practical advantage of owning rather than negotiating a buildout
+         with a landlord. Select options to see a running schedule.</p>
+    </div>
+
+    <figure class="fhero gcard" data-full="assets/interior.jpg"
+            data-cap="Interior concept, previously completed Butters project" tabindex="0">
+      <img src="assets/interior.jpg" alt="Finished unit interior with mezzanine">
+      <figcaption><b>Interior concept</b>
+        A previously completed Butters project showing a finished mezzanine over the ground floor.
+        Shown for character only; it does not represent the finishes, layout or dimensions at
+        1150 Innovation Center.</figcaption>
+    </figure>
+
+    <div class="fwrap">
+      <div>
+        <div class="kicker" style="margin-bottom:14px;">Included in base delivery</div>
+        <dl style="margin:0 0 34px;"><div class="srow"><dt>Structure</dt><dd>Tilt wall concrete, 22 foot clear height, ground floor slab designed for industrial loading</dd></div><div class="srow"><dt>Loading</dt><dd>One insulated grade level overhead door per unit</dd></div><div class="srow"><dt>Storefront</dt><dd>Aluminum framed glass entry and glazing at the office frontage</dd></div><div class="srow"><dt>Mezzanine</dt><dd>550 SF structural mezzanine over the office, ready for buildout</dd></div><div class="srow"><dt>Fire protection</dt><dd>Sprinklered throughout to code for the permitted use</dd></div><div class="srow"><dt>Utilities</dt><dd>Electrical service, water and sanitary stubbed to each unit</dd></div><div class="srow"><dt>Restroom</dt><dd>One ADA compliant restroom per unit</dd></div><div class="srow"><dt>Site</dt><dd>Landscaped parking, exterior lighting, monument signage</dd></div></dl>
+
+        <div class="kicker" style="margin-bottom:14px;">Select your finishes</div>
+        <div class="fgroup"><div class="flab">Mezzanine flooring</div><div class="swrow"><button class="swatch on" data-fg="floor" data-name="Luxury vinyl plank" data-desc="Wood look plank, commercial wear layer" data-tile="lvp" title="Luxury vinyl plank"><span class="sw" style="background-image:url(assets/mat/lvp.jpg)"></span><span class="swn">Luxury vinyl plank</span></button><button class="swatch" data-fg="floor" data-name="Carpet tile" data-desc="Modular tile, acoustic underlay" data-tile="carpet" title="Carpet tile"><span class="sw" style="background-image:url(assets/mat/carpet.jpg)"></span><span class="swn">Carpet tile</span></button><button class="swatch" data-fg="floor" data-name="Porcelain tile" data-desc="Large format, matte finish" data-tile="porcelain" title="Porcelain tile"><span class="sw" style="background-image:url(assets/mat/porcelain.jpg)"></span><span class="swn">Porcelain tile</span></button></div></div><div class="fgroup"><div class="flab">Warehouse slab</div><div class="swrow"><button class="swatch on" data-fg="slab" data-name="Sealed concrete" data-desc="Penetrating sealer, standard delivery" data-tile="concrete_sealed" title="Sealed concrete"><span class="sw" style="background-image:url(assets/mat/concrete_sealed.jpg)"></span><span class="swn">Sealed concrete</span></button><button class="swatch" data-fg="slab" data-name="Densified polish" data-desc="Ground and polished, higher reflectivity" data-tile="concrete_polish" title="Densified polish"><span class="sw" style="background-image:url(assets/mat/concrete_polish.jpg)"></span><span class="swn">Densified polish</span></button><button class="swatch" data-fg="slab" data-name="Epoxy coating" data-desc="Seamless, chemical resistant, choose a finish" data-tile="epoxy_pearl" title="Epoxy coating"><span class="sw" style="background-image:url(assets/mat/epoxy_pearl.jpg)"></span><span class="swn">Epoxy coating</span></button></div><div class="subwrap" id="epoxy-sub" hidden><div class="flab sublab">Epoxy finish</div><div class="swrow"><button class="swatch sub on" data-fg="epoxy" data-name="Pearl metallic" data-desc="Light silver swirl, high reflectivity" data-tile="epoxy_pearl" title="Pearl metallic"><span class="sw" style="background-image:url(assets/mat/epoxy_pearl.jpg)"></span><span class="swn">Pearl metallic</span></button><button class="swatch sub" data-fg="epoxy" data-name="Graphite metallic" data-desc="Dark charcoal swirl" data-tile="epoxy_graphite" title="Graphite metallic"><span class="sw" style="background-image:url(assets/mat/epoxy_graphite.jpg)"></span><span class="swn">Graphite metallic</span></button><button class="swatch sub" data-fg="epoxy" data-name="Copper metallic" data-desc="Warm bronze swirl" data-tile="epoxy_copper" title="Copper metallic"><span class="sw" style="background-image:url(assets/mat/epoxy_copper.jpg)"></span><span class="swn">Copper metallic</span></button><button class="swatch sub" data-fg="epoxy" data-name="Slate metallic" data-desc="Cool green grey swirl" data-tile="epoxy_slate" title="Slate metallic"><span class="sw" style="background-image:url(assets/mat/epoxy_slate.jpg)"></span><span class="swn">Slate metallic</span></button><button class="swatch sub" data-fg="epoxy" data-name="Grey and black flake" data-desc="Broadcast vinyl flake, slip resistant" data-tile="flake_greyblack" title="Grey and black flake"><span class="sw" style="background-image:url(assets/mat/flake_greyblack.jpg)"></span><span class="swn">Grey and black flake</span></button><button class="swatch sub" data-fg="epoxy" data-name="Tan and bronze flake" data-desc="Broadcast vinyl flake, warm blend" data-tile="flake_tan" title="Tan and bronze flake"><span class="sw" style="background-image:url(assets/mat/flake_tan.jpg)"></span><span class="swn">Tan and bronze flake</span></button><button class="swatch sub" data-fg="epoxy" data-name="Blue and white flake" data-desc="Broadcast vinyl flake, cool blend" data-tile="flake_blue" title="Blue and white flake"><span class="sw" style="background-image:url(assets/mat/flake_blue.jpg)"></span><span class="swn">Blue and white flake</span></button></div></div></div><div class="fgroup"><div class="flab">Wall finish</div><div class="swrow"><button class="swatch on" data-fg="wall" data-name="Warm white" data-desc="Flat latex throughout" data-tile="paint_white" title="Warm white"><span class="sw" style="background-image:url(assets/mat/paint_white.jpg)"></span><span class="swn">Warm white</span></button><button class="swatch" data-fg="wall" data-name="Soft greige" data-desc="Flat latex, warm neutral" data-tile="paint_greige" title="Soft greige"><span class="sw" style="background-image:url(assets/mat/paint_greige.jpg)"></span><span class="swn">Soft greige</span></button><button class="swatch" data-fg="wall" data-name="Deep olive accent" data-desc="Accent wall at reception" data-tile="paint_olive" title="Deep olive accent"><span class="sw" style="background-image:url(assets/mat/paint_olive.jpg)"></span><span class="swn">Deep olive accent</span></button><button class="swatch" data-fg="wall" data-name="Charcoal accent" data-desc="Accent wall at reception" data-tile="paint_charcoal" title="Charcoal accent"><span class="sw" style="background-image:url(assets/mat/paint_charcoal.jpg)"></span><span class="swn">Charcoal accent</span></button></div></div><div class="fgroup"><div class="flab">Mezzanine railing</div><div class="swrow"><button class="swatch on" data-fg="rail" data-name="Painted steel" data-desc="Standard picket, powder coated" data-tile="rail_steel" title="Painted steel"><span class="sw" style="background-image:url(assets/mat/rail_steel.jpg)"></span><span class="swn">Painted steel</span></button><button class="swatch" data-fg="rail" data-name="Glass panel" data-desc="Framed tempered glass" data-tile="rail_glass" title="Glass panel"><span class="sw" style="background-image:url(assets/mat/rail_glass.jpg)"></span><span class="swn">Glass panel</span></button><button class="swatch" data-fg="rail" data-name="Cable rail" data-desc="Stainless cable, minimal sightline" data-tile="rail_cable" title="Cable rail"><span class="sw" style="background-image:url(assets/mat/rail_cable.jpg)"></span><span class="swn">Cable rail</span></button></div></div><div class="fgroup"><div class="flab">Lighting</div><div class="swrow"><button class="swatch on" data-fg="light" data-name="Recessed LED" data-desc="Flat ceiling, even wash" data-tile="light_recessed" title="Recessed LED"><span class="sw" style="background-image:url(assets/mat/light_recessed.jpg)"></span><span class="swn">Recessed LED</span></button><button class="swatch" data-fg="light" data-name="Linear pendant" data-desc="Suspended runs over open plan" data-tile="light_linear" title="Linear pendant"><span class="sw" style="background-image:url(assets/mat/light_linear.jpg)"></span><span class="swn">Linear pendant</span></button><button class="swatch" data-fg="light" data-name="Architectural cove" data-desc="Indirect perimeter light" data-tile="light_cove" title="Architectural cove"><span class="sw" style="background-image:url(assets/mat/light_cove.jpg)"></span><span class="swn">Architectural cove</span></button></div></div>
+      </div>
+
+      <aside class="fpanel">
+        <div class="fprev" id="fprev">
+          <div class="fp fp-wall" id="fp-wall"></div>
+          <div class="fp fp-rail" id="fp-rail"></div>
+          <div class="fp fp-floor" id="fp-floor"></div>
+          <div class="fp fp-slab" id="fp-slab"></div>
+          <div class="fp fp-light" id="fp-light"></div>
+          <span class="fpnote">Representative tones only</span>
+        </div>
+        <div class="kicker" style="margin:22px 0 12px;">Your schedule</div>
+        <div class="fsum" data-fs="floor"><span class="fsk">Mezzanine flooring</span><span class="fsv">Luxury vinyl plank</span><span class="fsd">Wood look plank, commercial wear layer</span></div><div class="fsum" data-fs="slab"><span class="fsk">Warehouse slab</span><span class="fsv">Sealed concrete</span><span class="fsd">Penetrating sealer, standard delivery</span></div><div class="fsum" data-fs="wall"><span class="fsk">Wall finish</span><span class="fsv">Warm white</span><span class="fsd">Flat latex throughout</span></div><div class="fsum" data-fs="rail"><span class="fsk">Mezzanine railing</span><span class="fsv">Painted steel</span><span class="fsd">Standard picket, powder coated</span></div><div class="fsum" data-fs="light"><span class="fsk">Lighting</span><span class="fsv">Recessed LED</span><span class="fsd">Flat ceiling, even wash</span></div>
+        <button class="btn btn-d" id="fcopy" style="margin-top:18px; width:100%;">Copy schedule</button>
+        <p class="fdisc">Swatches indicate tone and character only. They are not product samples and
+          do not represent a specific manufacturer, color or product line. The final finish schedule,
+          allowances and any options carrying a price adjustment will be issued with the condominium
+          documents. Buyers may also engage their own contractor for interior buildout, subject to
+          association rules and permitting.</p>
+      </aside>
+    </div>
   </div>
 </section>
 
@@ -784,6 +881,90 @@ section { padding:clamp(56px,7vw,92px) 0; }
   stage.addEventListener('touchend', function(e){
     for (var i=0;i<e.changedTouches.length;i++) delete pts[e.changedTouches[i].identifier];
   });
+
+  /* ---------- finishes ---------- */
+  var fprev = document.getElementById('fprev');
+  if (fprev) {
+    var epoxySub = document.getElementById('epoxy-sub');
+
+    function paintLayer(group, tile){
+      var layer = document.getElementById('fp-'+group);
+      if (layer) layer.style.backgroundImage = 'url(assets/mat/'+tile+'.jpg)';
+    }
+    function setRow(group, name, desc){
+      var row = document.querySelector('.fsum[data-fs="'+group+'"]');
+      if (!row) return;
+      row.querySelector('.fsv').textContent = name;
+      row.querySelector('.fsd').textContent = desc;
+    }
+    function activeSub(){
+      return document.querySelector('.swatch.sub.on');
+    }
+    function slabIsEpoxy(){
+      var cur = document.querySelector('.swatch[data-fg="slab"].on');
+      return cur && cur.dataset.name.indexOf('Epoxy') === 0;
+    }
+    function syncSlab(){
+      var epoxy = slabIsEpoxy();
+      epoxySub.hidden = !epoxy;
+      if (epoxy) {
+        var sub = activeSub() || document.querySelector('.swatch.sub');
+        sub.classList.add('on');
+        paintLayer('slab', sub.dataset.tile);
+        setRow('slab', 'Epoxy, ' + sub.dataset.name, sub.dataset.desc);
+      } else {
+        var cur = document.querySelector('.swatch[data-fg="slab"].on');
+        paintLayer('slab', cur.dataset.tile);
+        setRow('slab', cur.dataset.name, cur.dataset.desc);
+      }
+    }
+
+    document.querySelectorAll('.swatch:not(.sub)').forEach(function(b){
+      b.addEventListener('click', function(){
+        var g = b.dataset.fg;
+        document.querySelectorAll('.swatch:not(.sub)[data-fg="'+g+'"]').forEach(function(x){
+          x.classList.remove('on');
+        });
+        b.classList.add('on');
+        if (g === 'slab') { syncSlab(); return; }
+        paintLayer(g, b.dataset.tile);
+        setRow(g, b.dataset.name, b.dataset.desc);
+      });
+    });
+
+    document.querySelectorAll('.swatch.sub').forEach(function(b){
+      b.addEventListener('click', function(){
+        document.querySelectorAll('.swatch.sub').forEach(function(x){ x.classList.remove('on'); });
+        b.classList.add('on');
+        paintLayer('slab', b.dataset.tile);
+        setRow('slab', 'Epoxy, ' + b.dataset.name, b.dataset.desc);
+      });
+    });
+
+    /* initial paint */
+    document.querySelectorAll('.swatch:not(.sub).on').forEach(function(b){
+      if (b.dataset.fg === 'slab') return;
+      paintLayer(b.dataset.fg, b.dataset.tile);
+      setRow(b.dataset.fg, b.dataset.name, b.dataset.desc);
+    });
+    syncSlab();
+
+    var cp = document.getElementById('fcopy');
+    cp.addEventListener('click', function(){
+      var lines = ['1150 Innovation Center - finish selections', ''];
+      document.querySelectorAll('.fsum').forEach(function(r){
+        lines.push(r.querySelector('.fsk').textContent + ': ' +
+                   r.querySelector('.fsv').textContent + ' (' +
+                   r.querySelector('.fsd').textContent + ')');
+      });
+      lines.push('', 'Representative selections only. Final finish schedule to be issued with the condominium documents.');
+      var txt = lines.join(String.fromCharCode(10));
+      function done(){ cp.textContent = 'Copied'; setTimeout(function(){ cp.textContent = 'Copy schedule'; }, 1800); }
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(txt).then(done, function(){ window.prompt('Copy your schedule:', txt); });
+      } else { window.prompt('Copy your schedule:', txt); }
+    });
+  }
 
   /* ---------- map reveal ---------- */
   var gm = document.getElementById('gmap');
